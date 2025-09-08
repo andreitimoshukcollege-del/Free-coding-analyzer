@@ -26,12 +26,11 @@ export const CodeEditor = memo(({
   onCodeChange,
   onAnalyze,
   onCopy,
-  onLoadSample,
   copied
 }: CodeEditorProps) => {
   
   // Memoize line calculations
-  const { lineCount, lineNumbersText, maxLines } = useMemo(() => {
+  const {lineNumbersText, maxLines } = useMemo(() => {
     const lines = code.split('\n');
     const count = Math.max(lines.length, 20);
     const max = Math.min(count, 100); // Cap at 100 for performance

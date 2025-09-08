@@ -1,4 +1,4 @@
-import { useState, useEffect, memo, useCallback, useMemo } from 'react';
+import { useState, useEffect, memo, useCallback } from 'react';
 import { Check, Shield, AlertCircle, Lightbulb, Cpu } from 'lucide-react';
 // Import both AnalysisResult AND Issue from your types
 import type { AnalysisResult, Issue } from '../../types';
@@ -102,8 +102,8 @@ export const AnalysisPanel = memo<AnalysisPanelProps>(({
   const [activeTab, setActiveTab] = useState<'errors' | 'optimizations'>('errors');
 
   // Memoize computed values
-  const errorCount = useMemo(() => analysis?.errors?.length || 0, [analysis]);
-  const optimizationCount = useMemo(() => analysis?.optimizations?.length || 0, [analysis]);
+  //const errorCount = useMemo(() => analysis?.errors?.length || 0, [analysis]);
+  //const optimizationCount = useMemo(() => analysis?.optimizations?.length || 0, [analysis]);
 
   useEffect(() => {
     if (analysis) {

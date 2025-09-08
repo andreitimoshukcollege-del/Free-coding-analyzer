@@ -5,7 +5,7 @@ interface LineNumbersProps {
   darkMode: boolean;
 }
 
-export const LineNumbers = ({ lines, getIssueType, darkMode }: LineNumbersProps) => {
+export const LineNumbers = ({ lines, darkMode }: LineNumbersProps) => {
   // Only render up to 50 line numbers for performance
   const maxLines = Math.min(lines, 50);
   
