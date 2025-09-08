@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glass {
+  background: rgba(255, 255, 255, 0.95);
+  /* backdrop-filter: none; */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.glass-dark {
+  background: rgba(31, 41, 55, 0.95);
+  /* backdrop-filter: none; */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Use transform3d to enable GPU */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Line numbers styling */
+.line-numbers {
+  background-color: #f9fafb;
+  color: #9ca3af;
+  text-align: right;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  border-right: 1px solid #e5e7eb;
+  user-select: none;
+  overflow: hidden;
+}
+
+.line-numbers-dark {
+  background-color: rgba(17, 24, 39, 0.5);
+  color: #6b7280;
+  border-right-color: #374151;
+}
+
+.line-numbers pre {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
